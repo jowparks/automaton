@@ -1,0 +1,6 @@
+#!/bin/bash
+REMOTEDIR=root@192.168.88.3:/mnt/user/appdata/automaton/automaton
+BASEDIR=$(dirname $(dirname $0))
+echo "Syncing ${BASEDIR} to ${REMOTEDIR}"
+rsync -r ${BASEDIR} ${REMOTEDIR}
+
